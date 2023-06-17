@@ -1,0 +1,66 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div style="margin-top: 125px;">
+        <div style="width: 70%;margin: auto;padding: 20px;border: 1px solid;border-radius: 15px;">
+            <div style="text-align: center;">
+                <h3>Register Account</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6" style="padding-bottom: 25px;">
+                    <div>
+                        <label>First Name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="firstName" formControlName="firstName" (change) = "checkNull($event)"
+                         style="width: 100%;border-radius: 20px;border: 1px solid;" />
+                    </div>
+                    <div *ngIf="!firstNameVal" style="font-size: 12px;color: red;">First Name Required</div>
+                </div>
+                <div class="col-md-6" style="padding-bottom: 25px;">
+                    <div>
+                        <label>Last Name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="lastName" formControlName="lastName" (change) = "checkNull($event)"
+                         style="width: 100%;border-radius: 20px;border: 1px solid;" />
+                    </div>
+                    <div *ngIf="!lastNameVal" style="font-size: 12px;color: red;">Last Name Required</div>
+                </div>
+                <div class="col-md-12" style="padding-bottom: 25px;">
+                    <div>
+                        <label>Email Id</label>
+                    </div>
+                    <div>
+                        <input type="email" id="email" formControlName="email" (change) = "checkNull($event)"
+                        style="width: 100%;border-radius: 20px;border: 1px solid;" />
+                    </div>
+                    <div *ngIf="!emailVal" style="font-size: 12px;color: red;">Email Required</div>
+                </div>
+                <div class="col-md-6" style="padding-bottom: 25px;">
+                    <div>
+                        <label>Password</label>
+                    </div>
+                    <div>
+                        <input type="password" id="password" formControlName="password" (change) = "checkNull($event)"
+                        style="width: 100%;border-radius: 20px;border: 1px solid;" />
+                    </div>
+                    <div *ngIf="!passwordVal" style="font-size: 12px;color: red;">Password Required</div>
+                    <div *ngIf="!passwordCharVal" style="font-size: 12px;color: red;">Password should be between 8 and 16 characters and contain atleast 2 special characters</div>
+                </div>
+                <div class="col-md-6" style="padding-bottom: 25px;">
+                    <div>
+                        <label>Confirm Password</label>
+                    </div>
+                    <div>
+                        <input type="password" id="confirmPassword" formControlName="confirmPassword" (change) = "checkNull($event)"
+                        style="width: 100%;border-radius: 20px;border: 1px solid;" />
+                    </div>
+                    <div *ngIf="!confirmPasswordVal" style="font-size: 12px;color: red;">Password Required</div>
+                    <div *ngIf="!passwordMatchVal" style="font-size: 12px;color: red;">Password mismatch</div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary" style="width: 100px;">Register</button>
+            </div>
+        </div>
+    </div>
+</form>

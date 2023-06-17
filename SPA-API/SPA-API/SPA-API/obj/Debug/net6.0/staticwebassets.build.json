@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0GbRhDXnbN7amePko6yIXs+TSdj5i3Hzc8/XoMkaccQ=",
+  "Source": "SPA-API",
+  "BasePath": "_content/SPA-API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
